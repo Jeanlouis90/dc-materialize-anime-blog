@@ -1,0 +1,421 @@
+/* Core Styles */
+body, html{
+    margin:0;
+    font-size: 1.1em;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+    min-height: 100%;
+    height: 100%;
+    text-align: left;
+}
+p{
+    font-family: "Roboto", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+main img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+/* Navigation Web */
+nav{
+    background: #DFD;
+    width: 100%;
+}
+/* Header Showcase */
+header{
+    grid-area: header;
+}
+#showcase{
+    display: block;
+    margin-top: -25px;
+    background: #555;
+    width: 100%;
+    min-height: 250px;
+    height: 250px;
+    font-family: "Open Sans", sans-serif;
+    z-index: -2;
+}
+header h1, header h2, header h3, .bg-image h2{
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 12px;
+    background: rgba(22, 8, 5, 0.336);
+    color: rgba(255, 255, 255, 0.945);
+    text-align: center;
+    bottom: 0;
+    padding-top: 100px;
+    top: 0;
+}
+.bg-image{
+    position: absolute;
+    background: #555 url('img/Slam Dunk/5blarge5d5banimepaper5dsb3.jpg');
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    min-height: 250px;
+    z-index: 0;
+}
+
+#showcase .content-wrap, #section-a .main-wrap{
+    padding: 0 1.5em;
+}
+/* Main Area */
+#main{
+    display: block;
+    grid-area: content;
+    height: 100%;
+}
+
+#main img{
+    /* width: 100%; */
+    margin-bottom: 1em;
+}
+/* Section A */
+#section-a{
+    display: block;
+    columns: 2;
+    grid-template-columns: 7fr 2fr;
+    background: #eaeaea;
+    color: #555;
+    padding-left: 6%;
+    padding-bottom: 2em;
+    font-family: "Open Sans", sans-serif;
+}
+#section-a .main-wrap{
+    display:inherit;
+    columns: 2;
+}
+#section-a .main-wrap img{
+    margin-bottom: -5%;
+}
+#section-a p{
+    padding-top: 8%;
+}
+#section-a .second-main-wrap{
+    display: grid;
+    columns: 1;
+    padding: 1%;
+
+}
+#section-a .main-wrap h2{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 25px;
+}
+#section-a .review-wrap{
+    columns: 1;
+    position: relative;
+    padding: 5%;
+    display: inline-block;
+    text-align: justify;
+    font-size: 16px;
+}
+.review-text{
+    width: 400px;
+}
+.article-thumbnail{
+    height: 300px;
+    width: 400px;
+}
+#section-a .review-wrap .dates{
+    font-size: 10px;
+    color: #666;
+
+}
+
+#section-a .character-wrap .dates{
+    font-size: 10px;
+    color: #666;
+
+}
+#section-a .character-wrap{
+    columns: 1;
+    position: relative;
+    padding: 5%;
+    display: inline-block;
+    text-align: justify;
+    font-size: 16px;
+}
+.character-text{
+    width: 400px;
+}
+.character-wrap .article-thumbnail{
+    height: 300px;
+    width: 400px;
+}
+#section-a .character-wrap .dates{
+    font-size: 10px;
+    color: #666;
+
+}
+#section-a .show-wrap{
+    columns: 1;
+    position: relative;
+    padding: 5%;
+    display: inline-block;
+    text-align: justify;
+    font-size: 16px;
+}
+.show-text{
+    width: 400px;
+}
+.show-wrap .article-thumbnail{
+    height: 300px;
+    width: 400px;
+}
+#section-a .show-wrap .dates{
+    font-size: 10px;
+    color: #666;
+
+}
+
+/* Sidebar / Ads */
+aside{
+    grid-area: side;
+    margin-right: .5rem;
+    background: rgb(143, 174, 231);
+    height: 100%;
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+aside h3{
+    color: #eaeaea;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: 600;
+}
+
+aside h4{
+    width: 100%;
+    margin-bottom: 5%;
+    font-weight: 600;
+    background: #555;
+    color: #eaeaea;
+}
+
+aside img{
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+aside .card-content{
+    margin-bottom: 10%;
+}
+
+/* Footer */
+footer{
+    position: relative;
+    display: flex;
+    grid-area: footer;
+    height: 175px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 12px;
+}
+footer .container{
+    display: inherit;
+}
+footer .first-footer{
+    display: inline-flex;
+    padding: 1%;
+}
+footer .second-footer{
+    display: inline-flex;
+    padding: 1%;
+}
+/* Media Queries */
+
+@media(min-width: 700px){
+    .holycontainer{
+        display: grid;
+        grid-template-areas: "header header" "nav nav" "content side" "footer footer";
+        grid-template-columns: 7fr 2fr;
+        grid-template-rows: 1fr auto;
+        grid-gap: 1px;
+        height: 100%;
+    }
+    /* Navigation Web */
+    nav{
+        grid-area: nav;
+        margin-top: -.5%;
+        width: 100%;
+    }
+    /* Header Web */
+    header{
+        grid-area: header;
+    }
+    /* Main Web */
+    main{
+        grid-area: content;  
+    }
+    /* Sidebar Web */
+
+    aside{
+        display: inherit;
+        grid-area: side;
+        margin-right: .5rem;
+    }
+    /* Footer Web */
+    footer{
+        grid-area: footer;
+        bottom: 0;
+    }
+}
+@media(max-width: 700px){
+    .grid{
+        display: grid;
+        grid-template-columns: 4fr;
+        text-align: center;
+    }
+    /* Header Showcase Mobile */
+    #showcase {
+        font-family: "Roboto", sans-serif;
+        display: block;
+        margin-top: -5px;
+        max-width: 450px;
+        z-index: -2;
+        width: 100%;
+    }
+    #showcase .bg-image{
+        z-index: 0;
+    }
+    /* Section A Mobile */
+    #section-a{
+        display: block;
+        padding: 1%;
+        columns: 1;
+    }
+    #section-a .main-wrap{
+        display: grid;
+        text-align: justify;
+    }
+    #section-a img{
+        margin-bottom: -5%;
+    }
+
+    #section-a .second-main-wrap{
+        display: grid;
+        text-align: justify;
+    }
+    #section-a .content-text{
+        grid-column: 1/3;
+    }
+    #section-a .review-wrap{
+        columns: 1;
+        position: relative;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: inline-block;
+        text-align: justify;
+        font-size: 16px;
+    }
+    .review-text{
+        width: 350px;
+    }
+    .review-wrap .article-thumbnail{
+        height: 300px;
+        width: 350px;
+        padding-bottom: 7%;
+    }
+    #section-a .review-wrap .dates{
+        text-align: center;
+    }
+    #section-a .review-wrap h2{
+        text-align: center;
+    }
+    #section-a .character-wrap .dates{
+        text-align: center;
+        font-size: 10px;
+        color: #666;
+    
+    }
+    #section-a .character-wrap{
+        columns: 1;
+        position: relative;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: inline-block;
+        text-align: justify;
+        font-size: 16px;
+    }
+    .character-text{
+        width: 350px;
+    }
+    .character-wrap .article-thumbnail{
+        height: 300px;
+        width: 350px;
+        padding-bottom: 7%;
+    }
+    #section-a .character-wrap .dates{
+        text-align: center;
+        font-size: 10px;
+        color: #666;
+    
+    }
+    #section-a .character-wrap h2{
+        text-align: center;
+    }
+
+    #section-a .show-wrap{
+        columns: 1;
+        position: relative;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: inline-block;
+        text-align: justify;
+        font-size: 16px;
+    }
+    .show-text{
+        width: 350px;
+    }
+    .show-wrap .article-thumbnail{
+        height: 300px;
+        width: 350px;
+        padding-bottom: 7%;
+    }
+    #section-a .show-wrap .dates{
+        text-align: center;
+        font-size: 10px;
+        color: #666;
+    
+    }
+
+    #section-a .show-wrap h2{
+        text-align: center;
+    }
+
+    /* Sidebar Mobile */
+    #sidebar{
+        display: none;
+    }
+    /* Footer Mobile */
+    footer{
+        position: relative;
+        padding: 2%;
+        text-align: center;
+        height: 175px;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        font-size: 12px;
+    }
+    .second-footer{
+        display: none;
+    }
+}
